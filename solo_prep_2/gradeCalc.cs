@@ -10,7 +10,7 @@ namespace solo_prep_2
             string gradeString = Console.ReadLine();
             int gradeInt = int.Parse(gradeString);
             // determine letter grade and if passed
-            char letterGrade;
+            char? letterGrade = null;
             if (gradeInt >= 90)
             {
                 letterGrade = 'A';
@@ -33,7 +33,10 @@ namespace solo_prep_2
             }
             if (gradeInt >= 70)
             {
-                Console.WriteLine($"You passed the class with a {letterGrade}. ")
+                Console.WriteLine($"You passed the class with a {letterGrade}. ");
+            }
+            else {
+                Console.WriteLine($"You failed the class with a {letterGrade}. ");
             }
         }
     }
